@@ -8,7 +8,7 @@ $red = $blue = $green = 0
 $total = $totalPowerOfCubes = 0
 
 
-foreach ($line in Get-Content '.\AoC\Day2\Day2.0.txt') {
+foreach ($line in Get-Content '.\2023\Day2\Day2.0.txt') {
     Write-Host $line
     $gameText = $line.Substring(0, $line.IndexOf(":"))
     [string]$gameNumber = $gametext[4..$gameText.Length] -join ''

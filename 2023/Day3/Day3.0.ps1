@@ -9,7 +9,7 @@ $sum = 0
 $match = $false
 
 
-foreach ($line in Get-Content '.\AoC\Day3\Day3.txt') {
+foreach ($line in Get-Content '.\2023\Day3\Day3.txt') {
 
     ##write-host "line:$linenum is $($line.length) long: $line"
     $array[$linenum++] = @("." + $line + ".")

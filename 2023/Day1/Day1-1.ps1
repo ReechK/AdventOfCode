@@ -3,7 +3,7 @@
 
 $tot = 0
 
-foreach ($line in Get-Content '.\AoC\Day1\Day1.0.txt') {
+foreach ($line in Get-Content '.\2023\Day1\Day1.txt') {
     #get ready for a line
     $firstnum = -1
     $lastnum = -1
