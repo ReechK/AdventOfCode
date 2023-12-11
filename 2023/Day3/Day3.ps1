@@ -58,6 +58,28 @@ for ($i = 1; $i -le 140; $i++){   ###$($array.count - 2); $i++) {
             
         } elseif($array[$i][$j] -eq '*'){
             ## we need to look for 2 numbers surrounding this *
+            ## I have not checked the file, but we need to check for a 3rd number and skip if we find one
+
+            if (
+                ($array[$i-1][$j-1] -match '\d')`
+                -or ($array[$i-1][$j] -match '\d')`
+                -or ($array[$i-1][$j+1] -match '\d')`
+            ) {
+                ##we have a match in the first row, lets see if it is 2
+                if( ($array[$i-1][$j-1] -match '\d')`
+                -and`
+                    ($array[$i-1][$j] -notmatch '\d')`
+                -and`
+                    ($array[$i-1][$j+1] -match '\d')`
+                ){
+                    ##we have 2 in one line
+                    #now what?
+                } else {
+                    #we have one in this line
+                }
+
+            }
+
             
         }
     }
